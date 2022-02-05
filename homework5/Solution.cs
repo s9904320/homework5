@@ -7,7 +7,7 @@ namespace homework5
         public static int[] TwoSum(int[] nums, int target)
         {
             int[] reAns = new int[2];
-            if(nums.Length == 0 || target < 0)
+            if(nums == null ||nums.Length < 2)
             {
                 reAns[0] = 0;
                 reAns[1] = 0;

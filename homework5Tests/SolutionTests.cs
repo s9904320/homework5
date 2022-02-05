@@ -12,14 +12,26 @@ namespace homework5.Tests
     public class SolutionTests
     {
         [TestMethod()]
-        public void TwoSumForEmptyOrTargetNegative()
+        public void TwoSumForEmptyOrNull()
         {
             int[] actual = { 0, 0 };
             int[] testNum = new int[0];
             int[] expected = Solution.TwoSum(testNum, 9);
             Assert.IsTrue(expected.SequenceEqual(actual));
-            
-            int[] testNum1 = { 1, 2 };
+
+            int[] testNum1 = null;
+            expected = Solution.TwoSum(testNum1, -1);
+            Assert.IsTrue(expected.SequenceEqual(actual));
+        }
+        [TestMethod()]
+        public void TwoSumForTestLengthShort()
+        {
+            int[] actual = { 0, 0 };
+            int[] testNum = new int[1];
+            int[] expected = Solution.TwoSum(testNum, 9);
+            Assert.IsTrue(expected.SequenceEqual(actual));
+
+            int[] testNum1 = null;
             expected = Solution.TwoSum(testNum1, -1);
             Assert.IsTrue(expected.SequenceEqual(actual));
         }
