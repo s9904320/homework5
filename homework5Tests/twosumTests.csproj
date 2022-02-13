@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\homework5\homework5.csproj" />
+    <ProjectReference Include="..\homework5\twosum.csproj" />
   </ItemGroup>
 
 </Project>

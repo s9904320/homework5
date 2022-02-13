@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace homework5
+namespace twosum
 {
     public class Solution
     {

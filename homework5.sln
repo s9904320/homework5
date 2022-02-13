@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31911.196
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "homework5", "homework5\homework5.csproj", "{D6205760-EB01-4A6B-8810-75E86F654F07}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "twosum", "homework5\twosum.csproj", "{D6205760-EB01-4A6B-8810-75E86F654F07}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "homework5Tests", "homework5Tests\homework5Tests.csproj", "{AE7BE464-507F-4179-90E9-CADD2F3DE2B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "twosumTests", "homework5Tests\twosumTests.csproj", "{AE7BE464-507F-4179-90E9-CADD2F3DE2B6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

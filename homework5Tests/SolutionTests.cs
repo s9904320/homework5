@@ -1,12 +1,12 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using homework5;
+using twosum;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace homework5.Tests
+namespace Tests
 {
     [TestClass()]
     public class SolutionTests
@@ -26,34 +26,25 @@ namespace homework5.Tests
         [TestMethod()]
         public void TwoSumForTestLengthShort()
         {
-            int[] actual = { 0, 0 };
             int[] testNum = new int[1];
             int[] expected = Solution.TwoSum(testNum, 9);
-            Assert.IsTrue(expected.SequenceEqual(actual));
+            Assert.IsTrue(expected.SequenceEqual(new[] { 0, 0 }));
 
-            int[] testNum1 = null;
-            expected = Solution.TwoSum(testNum1, -1);
-            Assert.IsTrue(expected.SequenceEqual(actual));
+            expected = Solution.TwoSum(null, -1);
+            Assert.IsTrue(expected.SequenceEqual(new[] { 0, 0 }));
         }
         [TestMethod()]
         public void TwoSumForNormal()
         {
-            int[] actual = { 0, 1 };
-            int[] testNum = { 2, 7, 11, 15 };
-            int[] expected = Solution.TwoSum(testNum, 9);
-            Assert.IsTrue(expected.SequenceEqual(actual));
+            int[] expected = Solution.TwoSum(new[] { 2, 7, 11, 15 }, 9);
+            Assert.IsTrue(expected.SequenceEqual(new[] { 0, 1 }));
 
-            actual[0] = 1;
-            actual[1] = 2;
-            int[] testNum1 = { 3, 2, 4 };
-            expected = Solution.TwoSum(testNum1, 6);
-            Assert.IsTrue(expected.SequenceEqual(actual));
 
-            actual[0] = 0;
-            actual[1] = 1;
-            int[] testNum2 = { 3, 3 };
-            expected = Solution.TwoSum(testNum2, 6);
-            Assert.IsTrue(expected.SequenceEqual(actual));
+            expected = Solution.TwoSum(new[] { 3, 2, 4 }, 6);
+            Assert.IsTrue(expected.SequenceEqual(new[] { 1, 2 }));
+
+            expected = Solution.TwoSum(new[] { 3, 3 }, 6);
+            Assert.IsTrue(expected.SequenceEqual(new[] { 0, 1 }));
 
         }
     }
