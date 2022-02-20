@@ -36,7 +36,7 @@ namespace Tests
         [TestMethod()]
         public void TwoSumForNormal()
         {
-            int[] expected = Solution.TwoSum(new[] { 2, 7, 11, 15 }, 9);
+            int[] expected = Solution.TwoSum(new[] { 7, 2, 11, 15 }, 9);
             Assert.IsTrue(expected.SequenceEqual(new[] { 0, 1 }));
 
 
