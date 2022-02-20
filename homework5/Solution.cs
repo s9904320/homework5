@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace twosum
 {
@@ -7,7 +9,9 @@ namespace twosum
         public static int[] TwoSum(int[] nums, int target)
         {
             int[] reAns = new int[2];
-            if(nums == null ||nums.Length < 2)
+            int otherTarget;
+            int secAns = -1;
+            if (nums == null ||nums.Length < 2)
             {
                 reAns[0] = 0;
                 reAns[1] = 0;
@@ -15,17 +19,23 @@ namespace twosum
             }
             else
             {
-                for(int firstNum = 0; firstNum < nums.Length; firstNum++)
+                var myDic = new Dictionary<int, int>();
+                for (int i = 0; i < nums.Length; i++)
                 {
-                    if((firstNum + 1) < nums.Length)
+                    myDic[nums[i]] = i;
+                }
+
+                for (int firAns = 0; firAns < nums.Length; firAns++)
+                {
+                    otherTarget = target - nums[firAns];
+
+                    if(myDic.TryGetValue(otherTarget, out secAns))
                     {
-                        for (int secNum = firstNum + 1; secNum < nums.Length; secNum++)
+                        if(firAns != secAns)
                         {
-                            if (target == (nums[firstNum] + nums[secNum]))
-                            {
-                                reAns[0] = firstNum;
-                                reAns[1] = secNum;
-                            }
+                            reAns[0] = firAns;
+                            reAns[1] = secAns;
+                            return reAns;
                         }
                     }
                 }
