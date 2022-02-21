@@ -33,9 +33,18 @@ namespace twosum
                     {
                         if(firAns != secAns)
                         {
-                            reAns[0] = secAns;
-                            reAns[1] = firAns;
-                            return reAns;
+                            if(firAns > secAns)
+                            {
+                                reAns[0] = secAns;
+                                reAns[1] = firAns;
+                                return reAns;
+                            }
+                            else
+                            {
+                                reAns[0] = firAns;
+                                reAns[1] = secAns;
+                                return reAns;
+                            }
                         }
                     }
                 }
